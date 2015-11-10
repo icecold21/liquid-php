@@ -1,7 +1,7 @@
 <?php
-include 'SwaggerClient-php/autoload.php';
+include 'LiquidClient-php/autoload.php';
 
-$apiClient = new \Swagger\Client\ApiClient();
+$apiClient = new \Liquid\Client\ApiClient();
 
 // set API host, default: 'https://api.liqu.id/v1'
 $apiClient->getConfig()->setHost('https://api.liquid.jcamp.net/v1');
@@ -35,7 +35,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $headerParams
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -71,7 +71,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $headerParams
 		);
 		echo json_encode($response_create);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -97,7 +97,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $headerParams
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -125,7 +125,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $headerParams
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -150,7 +150,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $headerParams
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -187,7 +187,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $headerParams
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -214,7 +214,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $headerParams
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -228,7 +228,7 @@ $apiClient->getConfig()->setDebug(false);
 	// create a new reseller
 	echo '<b>Create a new reseller using ResellersApi() :</b><br><br>';
 	try {
-		$reseller = new \Swagger\Client\Api\ResellersApi($apiClient);
+		$reseller = new \Liquid\Client\Api\ResellersApi($apiClient);
 
 		$email 				= 'arya+105@jogjacamp.co.id';
 		$name 				= 'Arya Prast';
@@ -274,7 +274,7 @@ $apiClient->getConfig()->setDebug(false);
 			$fax_no
 		);
 		echo json_encode($response_create);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -285,7 +285,7 @@ $apiClient->getConfig()->setDebug(false);
 	// retrieve all reseller
 	echo '<b>Retrieve all reseller menggunakan fungsi contact di ResellersApi() :</b><br><br>';
 	try{
-		$reseller = new \Swagger\Client\Api\ResellersApi($apiClient);
+		$reseller = new \Liquid\Client\Api\ResellersApi($apiClient);
 
 		$limit 					= 2;
 		$page_no 				= null;
@@ -319,7 +319,7 @@ $apiClient->getConfig()->setDebug(false);
 			$total_receipts_end
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -330,7 +330,7 @@ $apiClient->getConfig()->setDebug(false);
 	// retrieve a customer
 	echo '<b>Retrieve a customer menggunakan fungsi contact di CustomersApi() :</b><br><br>';
 	try{
-		$customer = new \Swagger\Client\Api\CustomersApi($apiClient);
+		$customer = new \Liquid\Client\Api\CustomersApi($apiClient);
 
 		$customer_id = 18;
 
@@ -338,7 +338,7 @@ $apiClient->getConfig()->setDebug(false);
 			$customer_id
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -349,7 +349,7 @@ $apiClient->getConfig()->setDebug(false);
 	// retrieve domains
 	echo '<b>Retrieve domains menggunakan fungsi retrieve di DomainsApi() :</b><br><br>';
 	try{
-		$domains = new \Swagger\Client\Api\DomainsApi($apiClient);
+		$domains = new \Liquid\Client\Api\DomainsApi($apiClient);
 		
 		$limit               = 2;
 		$page_no             = null;
@@ -389,7 +389,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $exact_domain_name
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -400,7 +400,7 @@ $apiClient->getConfig()->setDebug(false);
 	// check availability of a domain name
 	echo '<b>Check availability of a domain name menggunakan fungsi availability di DomainsApi() :</b><br><br>';
 	try{
-		$domains = new \Swagger\Client\Api\DomainsApi($apiClient);
+		$domains = new \Liquid\Client\Api\DomainsApi($apiClient);
 
 		$domain = 'example.com';
 
@@ -408,7 +408,7 @@ $apiClient->getConfig()->setDebug(false);
 			$domain
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -419,11 +419,11 @@ $apiClient->getConfig()->setDebug(false);
 	// retrieve account's balance
 	echo '<b>Retrieve account`s balance menggunakan fungsi retrieveAccountsBalance di AccountApi() :</b><br><br>';
 	try {
-		$account = new \Swagger\Client\Api\AccountApi($apiClient);
+		$account = new \Liquid\Client\Api\AccountApi($apiClient);
 
 		list($response, $header) = $account->retrieveAccountsBalance();
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -435,7 +435,7 @@ $apiClient->getConfig()->setDebug(false);
 	echo '<b>Add fund to a reseller menggunakan fungsi addFundReseller di BillingApi() :</b><br><br>';
 	try {
 		
-		$billing = new \Swagger\Client\Api\BillingApi($apiClient);
+		$billing = new \Liquid\Client\Api\BillingApi($apiClient);
 
 		$reseller_id    = 113;
 		$amount         = 150;
@@ -447,7 +447,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $description
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -458,7 +458,7 @@ $apiClient->getConfig()->setDebug(false);
 	// Update a reseller
 	echo '<b>Update a reseller using ResellersApi() :</b><br><br>';
 	try {
-		$reseller = new \Swagger\Client\Api\ResellersApi($apiClient);
+		$reseller = new \Liquid\Client\Api\ResellersApi($apiClient);
 
 		$reseller_id    = 113;
 		$email          = 'arya+15@jogjacamp.co.id';
@@ -504,7 +504,7 @@ $apiClient->getConfig()->setDebug(false);
 		    $fax_no
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -515,7 +515,7 @@ $apiClient->getConfig()->setDebug(false);
 	// delete a reseller
 	echo '<b>Delete a reseller menggunakan fungsi delete_ di ResellersApi() :</b><br><br>';
 	try {
-		$reseller = new \Swagger\Client\Api\ResellersApi($apiClient);
+		$reseller = new \Liquid\Client\Api\ResellersApi($apiClient);
 
 		$reseller_id = $response_create->reseller_id;
 
@@ -523,7 +523,7 @@ $apiClient->getConfig()->setDebug(false);
 			$reseller_id
 		);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";

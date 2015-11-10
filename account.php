@@ -1,9 +1,9 @@
 <?php
-include 'SwaggerClient-php/autoload.php';
+include 'LiquidClient-php/autoload.php';
 
 echo '<h2>Example Account API :</h2><hr><br>';
 
-$apiClient = new \Swagger\Client\ApiClient();
+$apiClient = new \Liquid\Client\ApiClient();
 
 // set API host, default: 'https://api.liqu.id/v1'
 $apiClient->getConfig()->setHost('http://api.liquid.jcamp.net/v1');
@@ -60,7 +60,7 @@ try {
 	// echo '<br><br>';
 
 	echo '<br><hr><b>Using AccountApi() :</b><hr><br>';
-	$account = new \Swagger\Client\Api\AccountApi($apiClient);
+	$account = new \Liquid\Client\Api\AccountApi($apiClient);
 
 	// retrieve account's balance
 	echo '<b>retrieve account`s balance :</b><br><br>';
@@ -86,7 +86,7 @@ try {
 	echo json_encode($response);
 	echo '<br><br>';
 
-} catch (Swagger\Client\ApiException $e) {
+} catch (Liquid\Client\ApiException $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
     echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
     echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";

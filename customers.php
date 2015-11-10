@@ -1,9 +1,9 @@
 <?php
-include 'SwaggerClient-php/autoload.php';
+include 'LiquidClient-php/autoload.php';
 
 echo '<h2>Example Customer API :</h2><hr><br>';
 
-$apiClient = new \Swagger\Client\ApiClient();
+$apiClient = new \Liquid\Client\ApiClient();
 
 // set API host, default: 'https://api.liqu.id/v1'
 $apiClient->getConfig()->setHost('http://api.liquid.jcamp.net/v1');
@@ -60,7 +60,7 @@ try {
 	echo '<br><br>';
 
 	echo '<br><hr><b>Using CustomersApi() :</b><hr><br>';
-	$customer = new \Swagger\Client\Api\CustomersApi($apiClient);
+	$customer = new \Liquid\Client\Api\CustomersApi($apiClient);
 
 	// retrieve all customer
 	echo '<b>Retrieve all customer :</b><br><br>';
@@ -127,7 +127,7 @@ try {
 	try {
 		list($response, $httpHeader) = $customer->deleteCustomer(17);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -141,7 +141,7 @@ try {
 	echo json_encode($response);
 	echo '<br><br>';
 
-} catch (Swagger\Client\ApiException $e) {
+} catch (Liquid\Client\ApiException $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
     echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
     echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";

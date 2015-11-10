@@ -1,9 +1,9 @@
 <?php
-include 'SwaggerClient-php/autoload.php';
+include 'LiquidClient-php/autoload.php';
 
 echo '<h2>Example Billing API :</h2><hr><br>';
 
-$apiClient = new \Swagger\Client\ApiClient();
+$apiClient = new \Liquid\Client\ApiClient();
 
 // set API host, default: 'https://api.liqu.id/v1'
 $apiClient->getConfig()->setHost('http://api.liquid.jcamp.net/v1');
@@ -60,7 +60,7 @@ try {
 	// echo '<br><br>';
 
 	echo '<br><hr><b>Using BillingApi() :</b><hr><br>';
-	$billing = new \Swagger\Client\Api\BillingApi($apiClient);
+	$billing = new \Liquid\Client\Api\BillingApi($apiClient);
 
 	// retrieve a customer's balance
 	echo '<b>retrieve a customer`s balance :</b><br><br>';
@@ -79,7 +79,7 @@ try {
 	try {
 		list($response, $httpHeader) = $billing->cancelCustomerInvoice(18, 26171);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -98,7 +98,7 @@ try {
 	try {
 		list($response, $httpHeader) = $billing->executeCustomerInvoice(18, 26171, 1);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -117,7 +117,7 @@ try {
 	try {
 		list($response, $httpHeader) = $billing->payCustomerInvoice(18, 26171, 1);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -131,7 +131,7 @@ try {
 	try {
 		list($response, $httpHeader) = $billing->payAddOnly(18, 26171);
 		echo json_encode($response);
-	} catch (Swagger\Client\ApiException $e) {
+	} catch (Liquid\Client\ApiException $e) {
 	    echo 'Caught exception: ', $e->getMessage(), "\n";
 	    echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
 	    echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
@@ -170,7 +170,7 @@ try {
 	echo json_encode($response);
 	echo '<br><br>';
 
-} catch (Swagger\Client\ApiException $e) {
+} catch (Liquid\Client\ApiException $e) {
     echo 'Caught exception: ', $e->getMessage(), "\n";
     echo '<br>HTTP response headers: ', $e->getResponseHeaders(), "\n";
     echo '<br>HTTP response body: ', $e->getResponseBody(), "\n";
