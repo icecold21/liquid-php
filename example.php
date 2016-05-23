@@ -4,7 +4,7 @@ include 'LiquidClient-php/autoload.php';
 $apiClient = new \Liquid\Client\ApiClient();
 
 // set API host, default: 'https://api.liqu.id/v1'
-$apiClient->getConfig()->setHost('https://api.liquid.jcamp.net/v1');
+$apiClient->getConfig()->setHost('https://api.liqu.id/v1');
 // $apiClient->getConfig()->setHost('https://api.domainsas.com/v1');
 
 // set Reseller ID
