@@ -6,7 +6,7 @@ echo '<h2>Example Account API :</h2><hr><br>';
 $apiClient = new \Liquid\Client\ApiClient();
 
 // set API host, default: 'https://api.liqu.id/v1'
-$apiClient->getConfig()->setHost('http://api.liquid.jcamp.net/v1');
+$apiClient->getConfig()->setHost('https://api.liqu.id/v1');
 // $apiClient->getConfig()->setHost('http://api.domainsas.com/v1');
 
 // set Reseller ID
